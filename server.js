@@ -2,7 +2,7 @@ var mqtt    = require('mqtt');
 var request = require('request');
 // var client  = mqtt.connect('mqtt://mqtt.booksclub.space');
  
-var client  = mqtt.connect('mqtt://139.59.140.87');
+var client  = mqtt.connect('mqtt://163.172.188.98');
 
 client.on('connect', function () {
   client.subscribe('book/#');
