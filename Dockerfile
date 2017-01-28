@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:latest
+FROM node:alpine
 
 WORKDIR /src
 ADD package.json package.json
@@ -10,5 +10,4 @@ RUN npm install
 
 ADD server.js server.js
 
-EXPOSE 5000
 CMD ["node", "server.js"]
