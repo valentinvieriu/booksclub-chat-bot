@@ -1,0 +1,10 @@
+version: '2'
+services:
+  chat-bot:
+    container_name: chat-bot
+    build: .
+    restart: always
+networks:
+  default:
+    external:
+      name: mainframe_default
