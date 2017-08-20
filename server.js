@@ -1,9 +1,10 @@
 var mqtt    = require('mqtt');
 var request = require('request');
 // var client  = mqtt.connect('mqtt://mqtt.booksclub.space');
- 
-var client  = mqtt.connect('mqtt://mqtt');
+const MQTT_SERVER = process.env.MQTT_SERVER || 'mqtt'; 
+var client  = mqtt.connect(`mqtt://${MQTT_SERVER}`);
 
+console.log(`Starting bot: mqtt://${MQTT_SERVER}:1883`);
 client.on('connect', function () {
   client.subscribe('book/#');
   console.log('Bot Started!');

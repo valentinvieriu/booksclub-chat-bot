@@ -1,10 +1,13 @@
 version: '2'
 services:
   chat-bot:
-    container_name: chat-bot
+    # image: '${REGISTRY_BASE_URL}/booksclub/chatbot:1.0.0'
+    image: 'valentinvieriu/booksclub:chatbot-1.0.0'
     build: .
     restart: always
+    environment: 
+      MQTT_SERVER: 'mqtt.iplatform.ro'
 networks:
   default:
     external:
-      name: mainframe_default
+      name: infra_default
