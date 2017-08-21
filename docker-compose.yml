@@ -1,8 +1,7 @@
 version: '2'
 services:
   chat-bot:
-    # image: '${REGISTRY_BASE_URL}/booksclub/chatbot:1.0.0'
-    image: 'valentinvieriu/booksclub:chatbot-1.0.0'
+    image: 'valentinvieriu/booksclub:chatbot-1.0.1'
     build: .
     restart: always
     environment: 
