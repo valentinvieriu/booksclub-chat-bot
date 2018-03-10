@@ -1,11 +1,11 @@
-version: '2'
+version: '2.3'
 services:
   chat-bot:
-    image: 'valentinvieriu/booksclub:chatbot-1.0.1'
+    image: 'valentinvieriu/booksclub:chatbot-1.0.3'
     build: .
     restart: always
     environment: 
-      MQTT_SERVER: 'mqtt.iplatform.ro'
+      MQTT_SERVER: 'mqtt.booksclub.space'
 networks:
   default:
     external:
